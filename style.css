@@ -1,0 +1,333 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cores principais */
+:root {
+    --laranja: #ff6600;
+    --azul: #0077cc;
+    --preto: #000000;
+    --cinza-claro: #f5f5f5;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--preto);
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+nav {
+    flex-grow: 1;
+    margin-left: 2rem;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-menu li {
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+    color: var(--laranja);
+    outline: none;
+}
+
+/* Menu toggle mobile */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Banner principal */
+.banner-principal {
+    background: linear-gradient(135deg, var(--laranja), var(--azul));
+    color: white;
+    padding: 6rem 0 4rem;
+    margin-top: 60px; /* altura do header fixo */
+    text-align: center;
+}
+
+.banner-content h1 {
+    font-size: 2rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    font-weight: 700;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.btn-laranja {
+    background-color: var(--laranja);
+    color: white;
+    border: 2px solid var(--laranja);
+}
+
+.btn-laranja:hover,
+.btn-laranja:focus {
+    background-color: white;
+    color: var(--laranja);
+    outline: none;
+}
+
+/* Seções */
+section {
+    padding: 3rem 0;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--preto);
+    border-bottom: 3px solid var(--laranja);
+    display: inline-block;
+    padding-bottom: 0.25rem;
+}
+
+/* Sobre */
+.sobre p {
+    max-width: 700px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Serviços */
+.lista-servicos {
+    list-style: disc inside;
+    max-width: 700px;
+    font-size: 1.1rem;
+    color: #333;
+    columns: 2;
+    gap: 1rem;
+}
+
+@media (max-width: 600px) {
+    .lista-servicos {
+        columns: 1;
+    }
+}
+
+/* Avaliações */
+.avaliacoes .depoimentos {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.avaliacoes blockquote {
+    background-color: var(--cinza-claro);
+    border-left: 5px solid var(--laranja);
+    padding: 1rem 1.5rem;
+    max-width: 300px;
+    font-style: italic;
+    color: #444;
+    border-radius: 4px;
+}
+
+.avaliacoes blockquote footer {
+    margin-top: 0.75rem;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--azul);
+}
+
+/* Localização */
+.localizacao .mapa {
+    margin-top: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Horários */
+.horarios table {
+    width: 100%;
+    max-width: 400px;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.horarios td {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.horarios td:first-child {
+    font-weight: 700;
+    color: var(--laranja);
+}
+
+/* Contato */
+.contato-lista {
+    list-style: none;
+    max-width: 400px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.contato-lista li {
+    margin-bottom: 0.75rem;
+}
+
+.contato-lista a {
+    color: var(--azul);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contato-lista a:hover,
+.contato-lista a:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+/* Footer */
+footer {
+    background-color: var(--preto);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.logo-footer img {
+    height: 40px;
+    width: auto;
+}
+
+.footer-contato p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-contato a {
+    color: var(--laranja);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-contato a:hover,
+.footer-contato a:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+footer p.copyright {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .header-container {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        background-color: var(--preto);
+        display: none;
+        width: 100%;
+        padding: 1rem 0;
+        border-top: 1px solid #333;
+    }
+
+    .nav-menu.nav-menu-active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .banner-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .avaliacoes .depoimentos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
